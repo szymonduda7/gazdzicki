@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Usługi | Gaździcki i Domerecki - Ciesielstwo, Dekarstwo, Tartak</title>
+<meta name="description" content="Pełna oferta Gaździcki i Domerecki: montaż więźby dachowej, pokrycia dachowe, remonty i renowacje dachów, remont kominów, mycie i malowanie dachów oraz usługi tartaczne. Suchodaniec, woj. opolskie." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23221b15'/%3E%3Cpath d='M6 19 L16 8 L26 19' stroke='%23b5652e' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='9' y1='24' x2='23' y2='24' stroke='%23d08a54' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg">Przejdź do treści</a>
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 bg-white border-b hairline">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 h-[68px] flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2.5 shrink-0">
+      <span class="leading-none">
+        <span class="font-display text-xl block" style="letter-spacing:-0.01em;">Gaździcki <em>&amp;</em> Domerecki</span>
+        <span class="hidden sm:block eyebrow mt-0.5" style="letter-spacing:0.1em; font-size:0.62rem;">Usługi ciesielsko-dekarskie</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-6" aria-label="Główna">
+      <a href="index.html#o-nas" class="nav-link">O nas</a>
+      <a href="uslugi.html" class="nav-link active">Usługi</a>
+      <a href="index.html#tartak" class="nav-link">Tartak</a>
+      <a href="index.html#opinie" class="nav-link">Opinie</a>
+      <a href="index.html#obszar" class="nav-link">Obszar</a>
+      <a href="index.html#kontakt" class="nav-link">Kontakt</a>
+    </nav>
+    <a href="tel:+48609754859" class="nav-call btn btn-primary !py-2.5 !px-4 !text-sm">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>609 754 859</span>
+    </a>
+    <button type="button" id="menuToggle" class="nav-toggle items-center justify-center w-10 h-10 rounded-lg border hairline" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otwórz menu">
+      <svg id="iconMenuOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <svg id="iconMenuClose" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div id="menuBackdrop" class="menu-backdrop" style="position:fixed; inset:0; top:68px; z-index:30; background:rgba(34,27,21,.45);"></div>
+<div id="mobileMenu" class="mobile-menu" style="position:fixed; top:68px; left:0; right:0; z-index:35; background:#fff; border-bottom:1px solid var(--line); box-shadow:0 20px 34px -22px rgba(34,27,21,.3);">
+  <nav class="max-w-6xl mx-auto px-5">
+    <a href="index.html#o-nas" class="mobile-nav-link">O nas</a>
+    <a href="uslugi.html" class="mobile-nav-link">Usługi</a>
+    <a href="index.html#tartak" class="mobile-nav-link">Tartak</a>
+    <a href="index.html#opinie" class="mobile-nav-link">Opinie</a>
+    <a href="index.html#obszar" class="mobile-nav-link">Obszar działania</a>
+    <a href="index.html#kontakt" class="mobile-nav-link">Kontakt</a>
+  </nav>
+</div>
+
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <section class="woodgrain py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-5 md:px-8">
+      <div class="flex items-center gap-2 text-sm mb-6" style="color:rgba(255,255,255,.6)">
+        <a href="index.html" class="hover:text-white transition-colors">Strona główna</a>
+        <span>/</span>
+        <span class="text-white">Usługi</span>
+      </div>
+      <p class="eyebrow mb-4" style="color:var(--cedar-light)">Pełna oferta</p>
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white max-w-2xl">Ciesielstwo,<br>dekarstwo <em>i&nbsp;tartak.</em></h1>
+      <p class="mt-6 text-white/70 leading-[1.7] max-w-xl">Od pierwszego cięcia drewna w tartaku po ostatnią dachówkę na dachu - wszystko wykonuje jeden zespół, jedna gwarancja.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-5 md:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <article id="wiezba" class="card p-7 scroll-mt-24">
+          <div class="icon-ring mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 4 20"/><path d="M12 4 20 20"/><path d="M8.5 14h7"/></svg>
+          </div>
+          <p class="eyebrow mb-1">Konstrukcje</p>
+          <h3 class="font-display text-2xl mb-2" style="color:var(--ink)">Montaż więźby dachowej</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--ink-soft)">Wykonujemy konstrukcję dachu i montaż więźby od podstaw, z drewna przygotowanego w naszym tartaku. Dobieramy przekroje i układ krokwi do rozpiętości budynku i planowanego pokrycia.</p>
+        </article>
+
+        <article id="pokrycia" class="card p-7 scroll-mt-24">
+          <div class="icon-ring mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-7h6v7"/></svg>
+          </div>
+          <p class="eyebrow mb-1">Pokrycia</p>
+          <h3 class="font-display text-2xl mb-2" style="color:var(--ink)">Pokrycia dachowe</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--ink-soft)">Montujemy blachodachówkę i inne pokrycia dachowe, dobrane do bryły budynku i budżetu inwestycji. Każdy dach kładziemy zgodnie ze sztuką dekarską, z dbałością o detale i szczelność.</p>
+        </article>
+
+        <article id="remonty" class="card p-7 scroll-mt-24">
+          <div class="icon-ring mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <p class="eyebrow mb-1">Naprawa</p>
+          <h3 class="font-display text-2xl mb-2" style="color:var(--ink)">Remonty i renowacje dachów</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--ink-soft)">Naprawiamy nieszczelności, wymieniamy uszkodzone łaty i deskowanie, przebudowujemy i odnawiamy stare dachy - od drobnej naprawy po kompleksową renowację.</p>
+        </article>
+
+        <article id="kominy" class="card p-7 scroll-mt-24">
+          <div class="icon-ring mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V11l8-6 8 6v10"/><path d="M15 3v6h3"/><path d="M4 21h16"/></svg>
+          </div>
+          <p class="eyebrow mb-1">Detale</p>
+          <h3 class="font-display text-2xl mb-2" style="color:var(--ink)">Remont kominów</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--ink-soft)">Naprawiamy i obrabiamy kominy wystające ponad połać dachu, tak aby połączenie z pokryciem pozostało szczelne przez lata.</p>
+        </article>
+
+        <article id="konserwacja" class="card p-7 scroll-mt-24">
+          <div class="icon-ring mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+          </div>
+          <p class="eyebrow mb-1">Konserwacja</p>
+          <h3 class="font-display text-2xl mb-2" style="color:var(--ink)">Mycie i malowanie dachów</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--ink-soft)">Czyścimy pokrycie z mchu i zabrudzeń oraz malujemy dachy, co poprawia wygląd budynku i wydłuża żywotność pokrycia.</p>
+        </article>
+
+        <article id="tartak" class="card p-7 scroll-mt-24">
+          <div class="icon-ring mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="4"/><rect x="3" y="10" width="18" height="4"/><rect x="3" y="16" width="12" height="4"/></svg>
+          </div>
+          <p class="eyebrow mb-1">Materiał</p>
+          <h3 class="font-display text-2xl mb-2" style="color:var(--ink)">Usługi tartaczne</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--ink-soft)">Sprzedajemy więźbę dachową, krawędziaki, łaty i deski budowlane przygotowane we własnym tartaku. Drewno budowlane dobieramy pod konkretną konstrukcję, bez pośredników i bez czekania na dostawę.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DLACZEGO MY -->
+  <section class="pb-20 md:pb-28">
+    <div class="max-w-6xl mx-auto px-5 md:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="eyebrow mb-4">Dlaczego my</p>
+          <h2 class="font-display text-4xl md:text-5xl" style="color:var(--ink)">Jeden zespół.<br>Materiał i montaż.</h2>
+          <p class="mt-6 text-base leading-[1.7] max-w-md" style="color:var(--ink-soft)">Nie kupujemy drewna u pośrednika - przygotowujemy je sami w tartaku, a potem ta sama ekipa stawia więźbę i kładzie pokrycie. Marcin Gaździcki i Andrzej Domerecki odpowiadają za całość osobiście.</p>
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <a href="tel:+48609754859" class="btn btn-primary">Zadzwoń: 609 754 859</a>
+            <a href="index.html#kontakt" class="btn btn-ghost">Napisz do nas</a>
+          </div>
+        </div>
+        <div class="card p-8" style="background:var(--sand);">
+          <div class="flex flex-col gap-5">
+            <div class="flex items-start gap-4">
+              <div class="icon-ring" style="flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold" style="color:var(--ink)">Bezpłatny kosztorys</p>
+                <p class="text-sm mt-1 leading-[1.6]" style="color:var(--ink-soft)">Oględziny i wycena materiału oraz robocizny bez zobowiązań.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="icon-ring" style="flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold" style="color:var(--ink)">Drewno z własnego tartaku</p>
+                <p class="text-sm mt-1 leading-[1.6]" style="color:var(--ink-soft)">Więźba, łaty, krawędziaki i deski dostępne od ręki.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="icon-ring" style="flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold" style="color:var(--ink)">Firma na rynku od 2018 roku</p>
+                <p class="text-sm mt-1 leading-[1.6]" style="color:var(--ink-soft)">Ocena 5,0 na Google przy 15 opiniach klientów.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="py-16 md:py-20" style="background:var(--cedar)">
+    <div class="max-w-6xl mx-auto px-5 md:px-8 flex flex-wrap items-center justify-between gap-6">
+      <div>
+        <h3 class="font-display text-3xl md:text-4xl text-white mb-2">Masz pytanie o dach albo materiał?</h3>
+        <p class="text-white/85">Zadzwoń - doradzimy bezpłatnie i umówimy termin oględzin.</p>
+      </div>
+      <a href="tel:+48609754859" class="btn btn-on-dark">609 754 859</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="py-8 border-t hairline">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+    <p class="text-xs" style="color:var(--ink-soft)">&copy; 2026 Usługi Ciesielsko-Dekarskie Gaździcki i Domerecki &middot; NIP 7561986522</p>
+    <p class="text-xs" style="color:var(--ink-soft)">Kadetów Lwowskich 4, 47-180 Suchodaniec &middot; 609 754 859</p>
+  </div>
+</footer>
+
+<!-- Mobile sticky call bar -->
+<div class="fixed bottom-0 inset-x-0 z-40 md:hidden bg-white border-t hairline px-4 py-3">
+  <a href="tel:+48609754859" class="btn btn-primary w-full justify-center">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Zadzwoń: 609 754 859
+  </a>
+</div>
+<div class="h-20 md:hidden" aria-hidden="true"></div>
+
+<script>
+(function(){
+  var btn = document.getElementById('menuToggle');
+  var menu = document.getElementById('mobileMenu');
+  var backdrop = document.getElementById('menuBackdrop');
+  var iconOpen = document.getElementById('iconMenuOpen');
+  var iconClose = document.getElementById('iconMenuClose');
+
+  function closeMenu(){
+    menu.classList.remove('open');
+    backdrop.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Otwórz menu');
+    iconOpen.style.display = '';
+    iconClose.style.display = 'none';
+  }
+  function openMenu(){
+    menu.classList.add('open');
+    backdrop.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.setAttribute('aria-label', 'Zamknij menu');
+    iconOpen.style.display = 'none';
+    iconClose.style.display = '';
+  }
+  btn.addEventListener('click', function(){
+    btn.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+  });
+  backdrop.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+  window.addEventListener('resize', function(){ if (window.innerWidth >= 992) closeMenu(); });
+})();
+</script>
+
+</body>
+</html>

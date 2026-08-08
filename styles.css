@@ -1,0 +1,316 @@
+:root{
+  --ink:#221B15;
+  --ink-soft:#4B4038;
+  --paper:#FFFFFF;
+  --sand:#F3EEE4;
+  --sand-dark:#E6DCC7;
+  --line:#E4D9C3;
+  --cedar:#B5652E;
+  --cedar-dark:#8A4A20;
+  --cedar-light:#D08A54;
+  --gold:#B8923C;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Display type: Staatliches - stamped, condensed, building-site signage character */
+.font-display{
+  font-family:'Staatliches', ui-sans-serif, system-ui, sans-serif;
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:0.015em;
+  line-height:1.06;
+}
+.font-display em{
+  font-style:normal;
+  color:var(--cedar);
+}
+
+/* Mono utility face: specs, labels, numbers - the "measuring tape" register */
+.font-mono{
+  font-family:'IBM Plex Mono', ui-monospace, monospace;
+}
+.eyebrow{
+  font-family:'IBM Plex Mono', ui-monospace, monospace;
+  font-weight:500;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-size:0.72rem;
+  color:var(--cedar-dark);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:0.55rem;
+  padding:0.9rem 1.6rem;
+  border-radius:0.4rem;
+  font-weight:600;
+  font-size:0.95rem;
+  font-family:'Inter', sans-serif;
+  transition:transform 220ms cubic-bezier(.16,1,.3,1), box-shadow 220ms cubic-bezier(.16,1,.3,1), background-color 220ms cubic-bezier(.16,1,.3,1), color 220ms;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:var(--cedar);
+  color:#fff;
+  box-shadow:0 1px 2px rgba(34,27,21,.16), 0 14px 26px -12px rgba(181,101,46,.55);
+}
+.btn-primary:hover{ background:var(--cedar-dark); transform:translateY(-2px); box-shadow:0 2px 4px rgba(34,27,21,.18), 0 18px 30px -12px rgba(181,101,46,.6); }
+.btn-primary:active{ transform:translateY(0); }
+.btn-ghost{
+  background:transparent;
+  color:var(--ink);
+  border:1.5px solid var(--ink);
+}
+.btn-ghost:hover{ background:var(--ink); color:#fff; transform:translateY(-2px); }
+.btn-ghost:active{ transform:translateY(0); }
+.btn-on-dark{
+  background:transparent;
+  color:#fff;
+  border:1.5px solid rgba(255,255,255,.55);
+}
+.btn-on-dark:hover{ background:#fff; color:var(--ink); transform:translateY(-2px); }
+a:focus-visible, button:focus-visible{
+  outline:2px solid var(--cedar);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:0.6rem;
+  box-shadow:0 1px 2px rgba(34,27,21,.04), 0 16px 30px -22px rgba(34,27,21,.2);
+  transition:transform 260ms cubic-bezier(.16,1,.3,1), box-shadow 260ms cubic-bezier(.16,1,.3,1), border-color 260ms;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 4px 10px rgba(34,27,21,.08), 0 26px 40px -20px rgba(181,101,46,.3);
+  border-color:#E9C6A4;
+}
+.icon-ring{
+  width:3.5rem;
+  height:3.5rem;
+  border-radius:0.5rem;
+  background:var(--sand);
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--cedar);
+  flex-shrink:0;
+}
+
+/* Dark sections: horizontal wood-grain wash instead of metal corrugation */
+.woodgrain{
+  background-color:var(--ink);
+  background-image:
+    linear-gradient(180deg, rgba(75,64,53,0) 0%, rgba(75,64,53,0.55) 100%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.045) 0px, rgba(255,255,255,0.045) 1px, transparent 1px, transparent 7px, rgba(255,255,255,0.02) 7px, transparent 9px),
+    repeating-linear-gradient(0deg, transparent 0px, transparent 130px, rgba(181,101,46,0.07) 130px, transparent 134px);
+}
+
+/* Hero visual: vertical plank stack, the tartak's own product as texture */
+.plank-wall{
+  background-color:var(--sand);
+  background-image:
+    repeating-linear-gradient(90deg,
+      rgba(34,27,21,0.09) 0px, rgba(34,27,21,0.09) 2px,
+      transparent 2px, transparent 64px
+    ),
+    repeating-linear-gradient(90deg,
+      rgba(208,138,84,0.16) 0px, rgba(208,138,84,0.16) 32px,
+      rgba(230,220,199,0.4) 32px, rgba(230,220,199,0.4) 64px
+    ),
+    repeating-linear-gradient(0deg,
+      rgba(34,27,21,0.05) 0px, rgba(34,27,21,0.05) 1px,
+      transparent 1px, transparent 5px
+    );
+}
+
+/* Hero photo collage */
+.hero-collage-tile{
+  position:relative;
+  overflow:hidden;
+}
+.hero-collage-tile img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.hero-collage-tile::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(181,101,46,.1);
+  mix-blend-mode:multiply;
+  pointer-events:none;
+}
+.hero-collage-tile:first-child::after{
+  background:linear-gradient(180deg, rgba(34,27,21,0) 55%, rgba(34,27,21,.32) 100%), rgba(181,101,46,.08);
+}
+
+/* Gallery */
+.gallery-item{
+  position:relative;
+  display:block;
+  border-radius:0.5rem;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 1px 2px rgba(34,27,21,.04), 0 16px 30px -22px rgba(34,27,21,.2);
+  transition:box-shadow 260ms cubic-bezier(.16,1,.3,1), border-color 260ms;
+}
+.gallery-item:hover, .gallery-item:focus-visible{
+  box-shadow:0 4px 10px rgba(34,27,21,.08), 0 26px 40px -20px rgba(181,101,46,.3);
+  border-color:#E9C6A4;
+}
+.gallery-item img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 420ms cubic-bezier(.16,1,.3,1);
+}
+.gallery-item:hover img, .gallery-item:focus-visible img{ transform:scale(1.06); }
+.gallery-item::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(34,27,21,0) 58%, rgba(34,27,21,.72) 100%), rgba(181,101,46,.07);
+  mix-blend-mode:multiply;
+  pointer-events:none;
+}
+.gallery-caption{
+  position:absolute;
+  left:0.9rem;
+  right:0.9rem;
+  bottom:0.7rem;
+  color:#fff;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.74rem;
+  font-weight:500;
+  letter-spacing:0.03em;
+  text-transform:uppercase;
+  z-index:1;
+}
+
+.star{ color:var(--gold); }
+.avatar{
+  width:2.75rem;
+  height:2.75rem;
+  border-radius:9999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Staatliches', sans-serif;
+  font-weight:400;
+  font-size:1.25rem;
+  color:#fff;
+  flex-shrink:0;
+}
+.hairline{ border-color:var(--line); }
+.nav-link{
+  position:relative;
+  color:var(--ink-soft);
+  font-weight:500;
+  font-size:0.95rem;
+  transition:color 200ms;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:0; right:0; bottom:-4px;
+  height:2px;
+  background:var(--cedar);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 260ms cubic-bezier(.16,1,.3,1);
+}
+.nav-link:hover{ color:var(--ink); }
+.nav-link:hover::after{ transform:scaleX(1); }
+.nav-link.active{ color:var(--ink); }
+.nav-link.active::after{ transform:scaleX(1); }
+::selection{ background:var(--cedar); color:#fff; }
+
+/* Ruler / tape-measure divider - the site's signature device */
+.ruler{ display:block; width:100%; height:22px; }
+.ruler-line{ stroke:var(--cedar); }
+.ruler-tick{ stroke:var(--line); }
+.ruler-tick-strong{ stroke:var(--sand-dark); }
+.ruler.on-dark .ruler-tick{ stroke:rgba(255,255,255,.14); }
+.ruler.on-dark .ruler-tick-strong{ stroke:rgba(255,255,255,.24); }
+.ruler.on-dark .ruler-line{ stroke:var(--cedar-light); }
+
+.nav-call{ display:inline-flex; }
+.nav-toggle{ display:none; color:var(--ink); background:#fff; }
+.nav-toggle:hover{ background:var(--sand); }
+.mobile-menu{ display:none; }
+.menu-backdrop{ display:none; }
+@media (max-width: 767.98px){
+  .nav-call{ display:none; }
+  .nav-toggle{ display:inline-flex; }
+}
+.mobile-menu.open{ display:block; }
+.menu-backdrop.open{ display:block; }
+.mobile-nav-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1.05rem 0.25rem;
+  border-bottom:1px solid var(--line);
+  font-weight:600;
+  font-size:1.05rem;
+  color:var(--ink);
+  transition:color 200ms;
+}
+.mobile-nav-link:last-child{ border-bottom:none; }
+.mobile-nav-link:active{ color:var(--cedar); }
+
+.card-link-arrow{
+  display:inline-flex;
+  align-items:center;
+  gap:0.35rem;
+  font-size:0.85rem;
+  font-weight:600;
+  color:var(--cedar);
+  margin-top:0.9rem;
+  transition:gap 220ms;
+}
+.card:hover .card-link-arrow{ gap:0.55rem; }
+
+/* uslugi.html subpage */
+.chip{
+  display:inline-flex;
+  align-items:center;
+  padding:0.5rem 1.05rem;
+  border-radius:0.35rem;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.24);
+  color:#fff;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.82rem;
+  font-weight:500;
+}
+
+/* Step markers - measuring-tape figures for the four-step process */
+.step-num{
+  font-family:'IBM Plex Mono', monospace;
+  font-weight:500;
+  color:var(--cedar);
+  font-size:0.85rem;
+  letter-spacing:0.06em;
+}

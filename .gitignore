@@ -1,0 +1,7 @@
+node_modules/
+temporary screenshots/
+npm-debug.log*
+.DS_Store
+*.log
+task.md
+claude.md
